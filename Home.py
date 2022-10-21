@@ -18,4 +18,4 @@ dx=pd.read_excel('./data/gen.xlsx')
 st.dataframe(dx)
 
 dt=pd.read_csv('./data/iris.csv')
-st.dataframe(dx)
+st.dataframe(dt)
