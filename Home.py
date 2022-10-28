@@ -20,7 +20,15 @@ st.dataframe(dx)
 dt=pd.read_csv('./data/iris.csv')
 st.dataframe(dt)
 
-dt1 = dt.head(10)
-st.bar_chart(dt1)
+
+data1 = dt['sepal.length'].sum()
+data2 = dt['sepal.width'].sum()
+data3 = dt['petal.length'].sum()
+data4 = dt['petal.width'].sum()
+
+dx=[data1, data2, data3, data4]
+dx2 = pd.DataFrame(dx, index=['data1','data2','data3','data4'])
+st.bar_chart(dx2)
 st.balloons()
+
 st.sidebar.markdown("# วิเคราะห์รายบุคคล ")
