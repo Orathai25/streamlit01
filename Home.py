@@ -36,7 +36,7 @@ else:
 
 
 html_8="""
-<div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
+<div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:white">
 <center><h5>การทำนายข้อมูลดอกไม้</h5></center>
 </div>
 """
@@ -49,7 +49,7 @@ sd = st.slider("กรุณาเลือกข้อมูล sepal.width")
 pt_len = st.slider("กรุณาเลือกข้อมูล petal.length")
 wd = st.slider("กรุณาเลือกข้อมูล petal.width")
 
-if  st.button("ทำนายผล]"):
+if  st.button("ทำนายผล"):
     st.markdown("ใส่โมเดล")
     st.button("ไม่แสดงข้อมูล")
 else:
