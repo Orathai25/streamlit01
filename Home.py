@@ -28,7 +28,14 @@ data4 = dt['petal.width'].sum()
 
 dx=[data1, data2, data3, data4]
 dx2 = pd.DataFrame(dx, index=['data1','data2','data3','data4'])
-st.bar_chart(dx2)
+
 st.balloons()
+
+if st.button("แสดงการจิตทัศน์ข้อมูล"):
+    st.write(dt.head(20))
+    st.bar_chart(dx2)
+    st.button("ไม่แสดงข้อมูล")
+else:
+    st.write("ไม่แสดงข้อมูล")
 
 st.sidebar.markdown("# วิเคราะห์รายบุคคล ")
