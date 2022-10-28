@@ -5,17 +5,21 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plotly.graph_objects as go
 
+st.header("Orathai")
+
 html_8="""
-<div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
-<center><h5>การทำนายข้อมูลดอกไม้</h5></center>
+<div style="background-color:#EE9513;padding:15px;border-radius:15px 15px 15px 15px;border-style:'solid';border-color:black">
+<center><h5>เกณฑ์การให้คะแนน 4</h5></center>
 </div>
 """
-
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
+dx=pd.read_excel('./data/gen.xlsx')
+st.dataframe(dx)
 
 dt=pd.read_csv('./data/iris.csv')
-st.write(dt.head(10))
+st.dataframe(dt)
+
 
 data1 = dt['sepal.length'].sum()
 data2 = dt['sepal.width'].sum()
@@ -29,7 +33,9 @@ st.balloons()
 
 if st.button("แสดงการจิตทัศน์ข้อมูล"):
     st.write(dt.head(20))
-    st.pie_chart(dx2)
+    st.bar_chart(dx2)
     st.button("ไม่แสดงข้อมูล")
 else:
     st.write("ไม่แสดงข้อมูล")
+
+st.sidebar.markdown("# วิเคราะห์รายบุคคล ")
