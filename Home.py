@@ -34,7 +34,7 @@ if st.button("แสดงการจิตทัศน์ข้อมูล"):
 else:
     st.write("ไม่แสดงข้อมูล")
 
-
+y=[data1, data2, data3, data4]
 x = ['data1','data2','data3','data4']
-plt.pie(dx2, labels=x)
+plt.pie(y, labels=x)
 plt.show() 
