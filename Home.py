@@ -7,7 +7,8 @@ import plotly.graph_objects as go
 import pickle
 
 st.balloons()
-st.image('./image/nanner.png')
+
+st.image('./image/banner.png')
 
 html_8="""
 <div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
