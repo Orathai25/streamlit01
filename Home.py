@@ -61,6 +61,13 @@ if  st.button("ทำนายผล"):
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction[0])
+    if prediction == 'Versicolor':
+        st.write("xxxx")
+    elif prediction == 'Versicolor':
+        st.write("yyyy")
+    else:
+        st.write("zzzz")
+
     st.button("ไม่แสดงข้อมูล")
 else:
     st.write("ไม่แสดงผลการทำนาย")
