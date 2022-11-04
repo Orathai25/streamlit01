@@ -6,8 +6,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pickle
 
-st.balloons()
-
 st.image('./image/banner.png')
 
 html_8="""
