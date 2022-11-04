@@ -6,6 +6,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pickle
 
+st.balloons()
+
 html_8="""
 <div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
 <center><h5>การทำนายข้อมูลดอกไม้</h5></center>
@@ -26,7 +28,6 @@ data4 = dt['petal.width'].sum()
 dx=[data1, data2, data3, data4]
 dx2 = pd.DataFrame(dx, index=['data1','data2','data3','data4'])
 
-st.balloons()
 
 if st.button("แสดงการจิตทัศน์ข้อมูล"):
     st.write(dt.head(20))
