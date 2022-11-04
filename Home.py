@@ -53,7 +53,6 @@ wd = st.number_input("กรุณาเลือกข้อมูล petal.wid
 
 
 if  st.button("ทำนายผล"):
-    st.markdown("ใส่โมเดล")
     loaded_model = pickle.load(open('./data/trained_model.sav', 'rb'))
     input_data =  (st_len, sd, pt_len, wd)
     # changing the input_data to numpy array
