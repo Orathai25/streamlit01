@@ -62,11 +62,11 @@ if  st.button("ทำนายผล"):
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction[0])
     if prediction == 'Versicolor':
-        st.write("xxxx")
-    elif prediction == 'Versicolor':
-        st.write("yyyy")
+        st.image('./image/versicolor.jpg')
+    elif prediction == 'Virginica':
+        st.image('./image/virginica.jpg')
     else:
-        st.write("zzzz")
+        st.image('./image/setosa.jpg')
 
     st.button("ไม่แสดงข้อมูล")
 else:
