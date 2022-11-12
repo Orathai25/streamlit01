@@ -10,23 +10,28 @@ st.image('./image/banner.png')
 
 html_8="""
 <div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
-<center><h5>การทำนายข้อมูลดอกไม้</h5></center>
+<center><h5>การวิเคราะห์ลูกค้าเพื่อแบ่งกลุ่มลูกค้าใหม่</h5></center>
 </div>
 """
 
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
-dt=pd.read_csv('./data/iris.csv')
+dt=pd.read_csv('./data/train_cus_car.csv')
 st.write(dt.head(10))
 
-data1 = dt['sepal.length'].sum()
-data2 = dt['sepal.width'].sum()
-data3 = dt['petal.length'].sum()
-data4 = dt['petal.width'].sum()
+data1 = dt['Gender'].sum()
+data2 = dt['Ever_Married'].sum()
+data3 = dt['Age'].sum()
+data4 = dt['Graduated'].sum()
+data5 = dt['Profession'].sum()
+data6 = dt['Work_Experience'].sum()
+data7 = dt['Spending_Score'].sum()
+data8 = dt['Family_Size'].sum()
 
-dx=[data1, data2, data3, data4]
-dx2 = pd.DataFrame(dx, index=['data1','data2','data3','data4'])
+
+dx=[data1, data2, data3, data4, data5, data6, data7, data8]
+dx2 = pd.DataFrame(dx, index=['data1, data2, data3, data4, data5, data6, data7, data8'])
 
 
 if st.button("แสดงการจิตทัศน์ข้อมูล"):
@@ -39,34 +44,32 @@ else:
 
 html_8="""
 <div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:white">
-<center><h5>การทำนายข้อมูลดอกไม้</h5></center>
+<center><h5>การวิเคราะห์ลูกค้าเพื่อแบ่งกลุ่มลูกค้าใหม่</h5></center>
 </div>
 """
 
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
-st_len = st.slider("กรุณาเลือกข้อมูล sepal.length")
-sd = st.slider("กรุณาเลือกข้อมูล sepal.width")
-pt_len = st.number_input("กรุณาเลือกข้อมูล petal.length")
-wd = st.number_input("กรุณาเลือกข้อมูล petal.width")
+gen = st.number_input("กรุณาเลือกข้อมูล Gender")
+mar = st.number_input("กรุณาเลือกข้อมูล Ever_Married")
+age = st.number_input("กรุณาเลือกข้อมูล Age")
+grad = st.number_input("กรุณาเลือกข้อมูล Graduated")
+prof = st.number_input("กรุณาเลือกข้อมูล Profession")
+work_e = st.number_input("กรุณาเลือกข้อมูล Work_Experience")
+spend = st.number_input("กรุณาเลือกข้อมูล Spending_Score")
+fami = st.number_input("กรุณาเลือกข้อมูล Family_Size")
 
 
 if  st.button("ทำนายผล"):
-    loaded_model = pickle.load(open('./data/trained_model.sav', 'rb'))
-    input_data =  (st_len, sd, pt_len, wd)
+    loaded_model = pickle.load(open('./data/cus_seg_model.sav', 'rb'))
+    input_data =  (gen, mar, age, grad, prof, work_e, spend, fami)
     # changing the input_data to numpy array
     input_data_as_numpy_array = np.asarray(input_data)
     # reshape the array as we are predicting for one instance
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction[0])
-    if prediction == 'Versicolor':
-        st.image('./image/versicolor.jpg')
-    elif prediction == 'Virginica':
-        st.image('./image/virginica.jpg')
-    else:
-        st.image('./image/setosa.jpg')
 
     st.button("ไม่แสดงข้อมูล")
 else:
