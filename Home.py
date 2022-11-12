@@ -36,7 +36,7 @@ dx2 = pd.DataFrame(dx, index=['data1','data2','data3','data4','data5','data6','d
 
 if st.button("แสดงการจิตทัศน์ข้อมูล"):
     st.write(dt.head(20))
-    st.bar_chart(dx2)
+    st.plotly_chart(dx2)
     st.button("ไม่แสดงข้อมูล")
 else:
     st.write("ไม่แสดงข้อมูล") 
@@ -77,13 +77,15 @@ elif grad == '1':
 else:
     st.write("คุณยังไม่ได้ระบุสถานะการศึกษา.")
 
-st.write('อาชีพ: 0 Healthcare, 1 Engineer, 2 Lawyer3, Entertainment4, Artist5, Executive6, Doctor7, Homemaker8, Marketing')
+st.write('อาชีพ: 0 Healthcare, 1 Engineer, 2 Lawyer, 3 Entertainment, 4 Artist, 5 Executive, 6 Doctor, 7 Homemaker, 8 Marketing')
 prof = st.selectbox('อาชีพของคุณ',('0', '1', '2','3', '4', '5','6', '7', '8'))
-st.write('You selected:', prof)
+st.write('อาชีพ:', prof)
 
 work_e = st.number_input("กรุณาเลือกข้อมูล ประสบการณ์การทำงาน")
 
-spend = st.number_input("กรุณาเลือกข้อมูล อัตราการใช้จ่าย")
+st.write('อัตราการใช้จ่าย: 0 ต่ำ, 1 กลาง, 2 สูง')
+spend = st.selectbox('อัตราการใช้จ่ายของคุณ',('0', '1', '2'))
+st.write('อัตราการใช้จ่าย:', prof)
 
 fami = st.number_input("กรุณาเลือกข้อมูล สมาชิกในครอบครัว(รวมทั้งตัวลูกค้า)")
 
