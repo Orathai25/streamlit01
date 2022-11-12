@@ -31,7 +31,7 @@ data8 = dt['Family_Size'].sum()
 
 
 dx=[data1, data2, data3, data4, data5, data6, data7, data8]
-dx2 = pd.DataFrame(dx, index=['data1, data2, data3, data4, data5, data6, data7, data8'])
+dx2 = pd.DataFrame(dx, index=['data1','data2','data3','data4','data5','data6','data7','data8'])
 
 
 if st.button("แสดงการจิตทัศน์ข้อมูล"):
