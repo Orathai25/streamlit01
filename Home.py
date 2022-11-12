@@ -51,7 +51,7 @@ html_8="""
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
-gen = st.number_input("กรุณาเลือกข้อมูล เพศ")
+gen1=st.radio("กรุณาเลือกข้อมูล เพศ",('ชาย', 'หญิง'))
 mar = st.number_input("กรุณาเลือกข้อมูล สถานะภาพการสมรส")
 age = st.number_input("กรุณาเลือกข้อมูล อายุ")
 grad = st.number_input("กรุณาเลือกข้อมูล จบการศึกษา")
@@ -69,7 +69,7 @@ if  st.button("ทำนายผล"):
     # reshape the array as we are predicting for one instance
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = loaded_model.predict(input_data_reshaped)
-    
+
     st.write(prediction[0])
 
     st.button("ไม่แสดงข้อมูล")
