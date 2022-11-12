@@ -10,7 +10,7 @@ st.image('./image/banner.png')
 
 html_8="""
 <div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
-<center><h5>การวิเคราะห์ลูกค้าเพื่อแบ่งกลุ่มลูกค้าใหม่</h5></center>
+<center><h5>การวิเคราะห์ลูกค้าเพื่อหากลุ่มลูกค้าใหม่</h5></center>
 </div>
 """
 
@@ -44,7 +44,7 @@ else:
 
 html_8="""
 <div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:white">
-<center><h5>การวิเคราะห์ลูกค้าเพื่อแบ่งกลุ่มลูกค้าใหม่</h5></center>
+<center><h5>การวิเคราะห์ลูกค้าเพื่อหากลุ่มลูกค้าใหม่</h5></center>
 </div>
 """
 
