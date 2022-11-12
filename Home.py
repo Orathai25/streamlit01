@@ -105,9 +105,9 @@ else:
     st.write("ไม่แสดงผลการทำนาย")
 
 
-audio_file = open('myaudio.ogg', 'rb')
+audio_file = open('NathanMoore.mp3', 'rb')
 audio_bytes = audio_file.read()
 
-st.audio(audio_bytes, format='audio/ogg')
+st.audio(audio_bytes, format='NathanMoore/mp3')
 
 
