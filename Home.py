@@ -51,7 +51,7 @@ html_8="""
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
-gen1=st.radio("กรุณาเลือกข้อมูล เพศ",('ชาย', 'หญิง'))
+gen=st.radio("กรุณาเลือกข้อมูล เพศ",('ชาย', 'หญิง'))
 mar = st.number_input("กรุณาเลือกข้อมูล สถานะภาพการสมรส")
 age = st.number_input("กรุณาเลือกข้อมูล อายุ")
 grad = st.number_input("กรุณาเลือกข้อมูล จบการศึกษา")
