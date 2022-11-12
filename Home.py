@@ -111,4 +111,11 @@ else:
     st.write("ไม่แสดงผลการทำนาย")
 
 
+import matplotlib.pyplot as plt # Data Visualization
+import seaborn as sns #Data Visualization
+
+#Use Pairplot to identify the relationship between numerical-variables
+sns.pairplot(dx, vars=['Age','Work_Experience','Family_Size'], diag_kind='hist', palette = "bright", hue='Segmentation')
+
+
 
