@@ -33,10 +33,16 @@ data8 = dt['Family_Size'].sum()
 dx=[data1, data2, data3, data4, data5, data6, data7, data8]
 dx2 = pd.DataFrame(dx, index=['data1','data2','data3','data4','data5','data6','data7','data8'])
 
+import matplotlib.pyplot as plt
 
 if st.button("แสดงการจิตทัศน์ข้อมูล"):
     st.write(dt.head(20))
+    
+    arr = np.random.normal(1, 1, size=100)
+    dx2, ax = plt.subplots()
+    ax.hist(arr, bins=20)
     st.pyplot(dx2)
+
     st.button("ไม่แสดงข้อมูล")
 else:
     st.write("ไม่แสดงข้อมูล") 
@@ -104,10 +110,5 @@ if  st.button("ทำนายผล"):
 else:
     st.write("ไม่แสดงผลการทำนาย")
 
-
-audio_file = open('NathanMoore.mp3', 'rb')
-audio_bytes = audio_file.read()
-
-st.audio(audio_bytes, format='NathanMoore/mp3')
 
 
