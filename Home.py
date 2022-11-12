@@ -10,7 +10,7 @@ st.image('./image/banner.png')
 
 html_8="""
 <div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
-<center><h5>การทำนายข้อมูลดอกไม้</h5></center>
+<center><h5>การวิเคราะห์ลูกค้าเพื่อแบ่งกลุ่มลูกค้าใหม่</h5></center>
 </div>
 """
 
@@ -51,7 +51,14 @@ html_8="""
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
-gen=st.radio("กรุณาเลือกข้อมูล เพศ",('ชาย', 'หญิง'))
+gen = st.radio("กรุณาเลือกข้อมูล เพศ",('ชาย', 'หญิง'))
+if gen == 'ชาย':
+    st.write('You selected ชาย.')
+elif gen == 'หญิง':
+    st.write('You selected หญิง.')
+else:
+    st.write("You didn't select gender.")
+
 mar = st.number_input("กรุณาเลือกข้อมูล สถานะภาพการสมรส")
 age = st.number_input("กรุณาเลือกข้อมูล อายุ")
 grad = st.number_input("กรุณาเลือกข้อมูล จบการศึกษา")
