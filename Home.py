@@ -38,7 +38,7 @@ import altair as alt
 if  st.button("แสดงการจิตทัศน์ข้อมูล"):
     st.write(dt.head(20))
 
-    st.line_chart(dt,x="Segmentation",y=["Profession", "Spending_Score"],  # <-- You can pass multiple columns!
+    st.line_chart(dt,x="Segmentation",y=["Gender", "Ever_Married","Profession", "Spending_Score","Family_Size"],  # <-- You can pass multiple columns!
     )
 
     st.button("ไม่แสดงข้อมูล")
