@@ -33,15 +33,16 @@ data8 = dt['Family_Size'].sum()
 dx=[data1, data2, data3, data4, data5, data6, data7, data8]
 dx2 = pd.DataFrame(dx, index=['data1','data2','data3','data4','data5','data6','data7','data8'])
 
-import matplotlib.pyplot as plt
+import altair as alt
 
-if st.button("แสดงการจิตทัศน์ข้อมูล"):
+if  st.button("แสดงการจิตทัศน์ข้อมูล"):
     st.write(dt.head(20))
-    
-    arr = np.random.normal(1, 1, size=100)
-    dx2, ax = plt.subplots()
-    ax.hist(arr, bins=20)
-    st.pyplot(dx2)
+
+    dt = pd.DataFrame(np.random.randn(200, 3),columns=['a', 'b', 'c'])
+
+    c = alt.Chart(dt).mark_circle().encode(
+        x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
+    st.altair_chart(c, use_container_width=True)
 
     st.button("ไม่แสดงข้อมูล")
 else:
@@ -110,14 +111,6 @@ if  st.button("ทำนายผล"):
 else:
     st.write("ไม่แสดงผลการทำนาย")
 
-
-import matplotlib.pyplot as plt # Data Visualization
-import seaborn as sns #Data Visualization
-
-data9 = dt['Segmentation'].sum()
-
-#Use Pairplot to identify the relationship between numerical-variables
-sns.pairplot(dx2, vars=['Age','Work_Experience','Family_Size'], diag_kind='hist', palette = "bright", hue='data9')
 
 
 
