@@ -36,7 +36,7 @@ dx2 = pd.DataFrame(dx, index=['data1','data2','data3','data4','data5','data6','d
 
 if st.button("แสดงการจิตทัศน์ข้อมูล"):
     st.write(dt.head(20))
-    st.plotly_chart(dx2)
+    st.pyplot(dx2)
     st.button("ไม่แสดงข้อมูล")
 else:
     st.write("ไม่แสดงข้อมูล") 
