@@ -38,11 +38,8 @@ import altair as alt
 if  st.button("แสดงการจิตทัศน์ข้อมูล"):
     st.write(dt.head(20))
 
-    dt = pd.DataFrame(np.random.randn(200, 3),columns=['a', 'b', 'c'])
-
-    c = alt.Chart(dt).mark_circle().encode(
-        x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
-    st.altair_chart(c, use_container_width=True)
+    st.line_chart(dt,x="Segmentation",y=["Profession", "Spending_Score"],  # <-- You can pass multiple columns!
+    )
 
     st.button("ไม่แสดงข้อมูล")
 else:
