@@ -51,20 +51,40 @@ html_8="""
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
-gen = st.radio("กรุณาเลือกข้อมูล เพศ",('ชาย', 'หญิง'))
-if gen == 'ชาย':
-    st.write('You selected ชาย.')
-elif gen == 'หญิง':
-    st.write('You selected หญิง.')
+gen = st.radio("กรุณาเลือกข้อมูล เพศ",('0','1'))
+if gen == '0':
+    st.write('เพศชาย.')
+elif gen == '1':
+    st.write('เพศหญิง.')
 else:
-    st.write("You didn't select gender.")
+    st.write("คุณยังไม่ได้เลือกเพศ.")
 
-mar = st.number_input("กรุณาเลือกข้อมูล สถานะภาพการสมรส")
+mar = st.radio("กรุณาเลือกข้อมูล สถานะภาพ",('0','1'))
+if mar == '0':
+    st.write('ยังไม่แต่งงาน.')
+elif mar == '1':
+    st.write('แต่งง่นแล้ว.')
+else:
+    st.write("คุณยังไม่ได้กรอกสถานะ.")
+
 age = st.number_input("กรุณาเลือกข้อมูล อายุ")
-grad = st.number_input("กรุณาเลือกข้อมูล จบการศึกษา")
-prof = st.number_input("กรุณาเลือกข้อมูล อาชีพ")
+
+grad = st.radio("กรุณาเลือกข้อมูล การศึกษา",('0','1'))
+if grad == '0':
+    st.write('ยังไม่สำเร็จการศึกษา.')
+elif grad == '1':
+    st.write('สำเร็จการศึกษาแล้ว.')
+else:
+    st.write("คุณยังไม่ได้ระบุสถานะการศึกษา.")
+
+st.write('อาชีพ: 0 Healthcare, 1 Engineer, 2 Lawyer3, Entertainment4, Artist5, Executive6, Doctor7, Homemaker8, Marketing')
+prof = st.selectbox('อาชีพของคุณ',('0', '1', '2','3', '4', '5','6', '7', '8'))
+st.write('You selected:', prof)
+
 work_e = st.number_input("กรุณาเลือกข้อมูล ประสบการณ์การทำงาน")
+
 spend = st.number_input("กรุณาเลือกข้อมูล อัตราการใช้จ่าย")
+
 fami = st.number_input("กรุณาเลือกข้อมูล สมาชิกในครอบครัว(รวมทั้งตัวลูกค้า)")
 
 
