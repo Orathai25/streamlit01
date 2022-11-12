@@ -114,8 +114,10 @@ else:
 import matplotlib.pyplot as plt # Data Visualization
 import seaborn as sns #Data Visualization
 
+data9 = dt['Segmentation'].sum()
+
 #Use Pairplot to identify the relationship between numerical-variables
-sns.pairplot(dx2, vars=['Age','Work_Experience','Family_Size'], diag_kind='hist', palette = "bright", hue='Segmentation')
+sns.pairplot(dx2, vars=['Age','Work_Experience','Family_Size'], diag_kind='hist', palette = "bright", hue='data9')
 
 
 
