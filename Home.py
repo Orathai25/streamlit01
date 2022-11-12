@@ -51,21 +51,14 @@ html_8="""
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
-gen = st.radio("กรุณาเลือกข้อมูล เพศ",('ชาย', 'หญิง'))
-if gen == 'ชาย':
-    st.write('You selected ชาย.')
-elif gen == 'หญิง':
-    st.write('You selected หญิง.')
-else:
-    st.write("You didn't select gender.")
-
-mar = st.number_input("กรุณาเลือกข้อมูล สถานะภาพการสมรส")
-age = st.number_input("กรุณาเลือกข้อมูล อายุ")
-grad = st.number_input("กรุณาเลือกข้อมูล จบการศึกษา")
-prof = st.number_input("กรุณาเลือกข้อมูล อาชีพ")
-work_e = st.number_input("กรุณาเลือกข้อมูล ประสบการณ์การทำงาน")
-spend = st.number_input("กรุณาเลือกข้อมูล อัตราการใช้จ่าย")
-fami = st.number_input("กรุณาเลือกข้อมูล สมาชิกในครอบครัว(รวมทั้งตัวลูกค้า)")
+gen = st.number_input("กรุณาเลือกข้อมูล Gender")
+mar = st.number_input("กรุณาเลือกข้อมูล Ever_Married")
+age = st.number_input("กรุณาเลือกข้อมูล Age")
+grad = st.number_input("กรุณาเลือกข้อมูล Graduated")
+prof = st.number_input("กรุณาเลือกข้อมูล Profession")
+work_e = st.number_input("กรุณาเลือกข้อมูล Work_Experience")
+spend = st.number_input("กรุณาเลือกข้อมูล Spending_Score")
+fami = st.number_input("กรุณาเลือกข้อมูล Family_Size")
 
 
 if  st.button("ทำนายผล"):
