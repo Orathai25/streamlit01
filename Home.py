@@ -9,7 +9,7 @@ import pickle
 st.image('./image/banner.png')
 
 html_8="""
-<div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
+<div style="background-color:##FFD148;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
 <center><h5>การวิเคราะห์ลูกค้าเพื่อหากลุ่มลูกค้าใหม่</h5></center>
 </div>
 """
@@ -36,7 +36,6 @@ dx2 = pd.DataFrame(dx, index=['data1','data2','data3','data4','data5','data6','d
 import altair as alt
 
 if  st.button("แสดงการจิตทัศน์ข้อมูล"):
-    st.write(dt.head(20))
 
     st.line_chart(dt,x="Segmentation",y=["Gender", "Ever_Married","Profession", "Spending_Score","Family_Size"],  # <-- You can pass multiple columns!
     )
@@ -47,7 +46,7 @@ else:
 
 
 html_8="""
-<div style="background-color:#EE9513;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:white">
+<div style="background-color:##FFD148;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:white">
 <center><h5>การวิเคราะห์ลูกค้าเพื่อหากลุ่มลูกค้าใหม่</h5></center>
 </div>
 """
