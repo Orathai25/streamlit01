@@ -17,6 +17,9 @@ html_8="""
 st.markdown(html_8,unsafe_allow_html=True)
 st.markdown("")
 
+st.write('About Dataset')
+dt=pd.read_csv('./data/desc.csv')
+
 dt=pd.read_csv('./data/train_cus_car.csv')
 st.write(dt.head(10))
 

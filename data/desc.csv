@@ -1,0 +1,10 @@
+﻿Attribute,meaning,class
+Gender,Gender of the customer,"0 Male, 1 Female"
+Ever_Married,Marital status of the customer,"0 No, 1 Yes"
+Age,Age of the customer,years old
+Graduated,Is the customer a graduate?,"0 No, 1 Yes"
+Profession,Profession of the customer,"0 Healthcare, 1 Engineer, 2 Lawyer, 3 Entertainment, 4 Artist, 5 Executive, 6 Doctor, 7 Homemaker, 8 Marketing "
+Work_Experience,Work Experience in years,Experience in years
+Spending_Score,Spending score of the customer,"0 Low, 1 Average, 2 High"
+Family_Size,Number of family members for the customer (including the customer),Number of family members
+Segmentation,(target) Customer Segment of the customer,"A, B, C ,D"
