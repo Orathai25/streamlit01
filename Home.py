@@ -10,7 +10,7 @@ st.image('./image/banner.png')
 
 html_8="""
 <div style="background-color:##FFD148;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
-<center><h5>การวิเคราะห์ลูกค้าเพื่อหากลุ่มลูกค้าใหม่</h5></center>
+<center><h5>การพยากรณ์กลุ่มลูกค้าใหม่ด้วยเทคนิคแรนดอมฟอเรส</h5></center>
 </div>
 """
 
@@ -47,7 +47,7 @@ else:
 
 html_8="""
 <div style="background-color:##FFD148;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:white">
-<center><h5>การวิเคราะห์ลูกค้าเพื่อหากลุ่มลูกค้าใหม่</h5></center>
+<center><h5>การพยากรณ์กลุ่มลูกค้าใหม่ด้วยเทคนิคแรนดอมฟอเรส</h5></center>
 </div>
 """
 
@@ -70,7 +70,7 @@ elif mar == '1':
 else:
     st.write("คุณยังไม่ได้กรอกสถานะ.")
 
-age = st.number_input("กรุณาเลือกข้อมูล อายุ")
+age = st.slider("กรุณาเลือกข้อมูล อายุ")
 
 grad = st.radio("กรุณาเลือกข้อมูล การศึกษา",('0','1'))
 if grad == '0':
@@ -84,13 +84,13 @@ st.write('อาชีพ: 0 Healthcare, 1 Engineer, 2 Lawyer, 3 Entertainment, 
 prof = st.selectbox('อาชีพของคุณ',('0', '1', '2','3', '4', '5','6', '7', '8'))
 st.write('อาชีพ:', prof)
 
-work_e = st.number_input("กรุณาเลือกข้อมูล ประสบการณ์การทำงาน")
+work_e = st.slider("กรุณาเลือกข้อมูล ประสบการณ์การทำงาน")
 
 st.write('อัตราการใช้จ่าย: 0 ต่ำ, 1 กลาง, 2 สูง')
 spend = st.selectbox('อัตราการใช้จ่ายของคุณ',('0', '1', '2'))
 st.write('อัตราการใช้จ่าย:', prof)
 
-fami = st.number_input("กรุณาเลือกข้อมูล สมาชิกในครอบครัว(รวมทั้งตัวลูกค้า)")
+fami = st.slider("กรุณาเลือกข้อมูล สมาชิกในครอบครัว(รวมทั้งตัวลูกค้า)")
 
 
 if  st.button("ทำนายผล"):
@@ -102,6 +102,15 @@ if  st.button("ทำนายผล"):
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     prediction = loaded_model.predict(input_data_reshaped)
     st.write(prediction[0])
+
+    if prediction == 'A':
+            st.image('./image/A.png')
+    elif prediction == 'B':
+        st.image('./image/B.png')
+    elif prediction == 'C':
+        st.image('./image/C.png')
+    else:
+        st.image('./image/D.png')
 
     st.button("ไม่แสดงข้อมูล")
 else:
