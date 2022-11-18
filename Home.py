@@ -19,7 +19,8 @@ st.markdown("")
 
 st.write('About Dataset')
 dataset=pd.read_csv('./data/desc.csv')
-st.write(dataset.head())
+st.write(dataset.head(10))
+
 dt=pd.read_csv('./data/train_cus_car.csv')
 st.write(dt.head(10))
 
