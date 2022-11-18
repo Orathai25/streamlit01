@@ -9,7 +9,7 @@ import pickle
 st.image('./image/banner.png')
 
 html_8="""
-<div style="background-color:##FFD148;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
+<div style="background-color:#FFD148;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:black">
 <center><h5>การพยากรณ์กลุ่มลูกค้าใหม่ด้วยเทคนิคแรนดอมฟอเรส</h5></center>
 </div>
 """
@@ -46,7 +46,7 @@ else:
 
 
 html_8="""
-<div style="background-color:##FFD148;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:white">
+<div style="background-color:#FFD148;padding:15px;border-radius:10px 10px 10px 10px;border-style:'double';border-color:white">
 <center><h5>การพยากรณ์กลุ่มลูกค้าใหม่ด้วยเทคนิคแรนดอมฟอเรส</h5></center>
 </div>
 """
